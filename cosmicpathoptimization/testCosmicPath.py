@@ -2,7 +2,7 @@ import unittest
 from cosmicpathoptimization import findMean
 
 
-class TestEgypt(unittest.TestCase):
+class TestCosmicPath(unittest.TestCase):
     def test_answer1(self) -> None:
         nums = [1, 2, 3, 4, 5]
         function_answer = findMean(nums, 5)
