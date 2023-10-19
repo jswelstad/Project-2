@@ -18,7 +18,7 @@ style-check:
 # discover and run all tests
 .PHONY: run-test
 run-test:
-	$(TEST) $(TEST_ARGS) cosmicpathoptimization
+	$(TEST) $(TEST_ARGS) cosmicpathoptimization/testCosmicPath.py
 
 .PHONY: clean
 clean:
