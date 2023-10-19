@@ -1,5 +1,5 @@
 import unittest
-from cosmicPath import findMean
+from cosmicpathoptimization import findMean
 
 
 class TestEgypt(unittest.TestCase):

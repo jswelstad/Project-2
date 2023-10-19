@@ -4,8 +4,10 @@ Date: 10/17/23
 Description: Find the mean of the numbers
 '''
 
+from typing import List
 
-def findMean(listNums: list[int], num: int) -> int:
+
+def findMean(listNums: List[int], num: int) -> int:
     total: int = 0
     for i in listNums:
         total += i

@@ -1,9 +1,9 @@
 PROGRAM = python3
-MAIN = cosmicPath.py
+MAIN = cosmicpathoptimization.py
 TESTMAIN = testCosmicPath.py
 TEST = pytest
 STYLE_FIX = autopep8 --in-place --recursive --aggressive --aggressive
-KATTIS = kattis -p cosmicpathoptimization
+KATTIS = $(PROGRAM) submit.py
 
 .PHONY: test
 test:
@@ -30,7 +30,7 @@ style-fix:
 
 .PHONY: kattis
 kattis:
-	$(MAIN) $(KATTIS)
+	$(KATTIS) $(MAIN) 
 
 .PHONY: clean
 clean:
@@ -40,4 +40,4 @@ clean:
 	@echo "All Clean"
 
 .PHONY: all
-all: mypy style style-fix test kattis
+all: mypy style style-fix test kattis clean
