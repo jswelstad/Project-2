@@ -40,4 +40,4 @@ clean:
 	@echo "All Clean"
 
 .PHONY: all
-all: mypy style style-fix test kattis clean
+all: mypy style style-fix clean test kattis 
