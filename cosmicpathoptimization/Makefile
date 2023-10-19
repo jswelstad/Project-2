@@ -3,7 +3,7 @@ MAIN = cosmicpathoptimization.py
 TESTMAIN = testCosmicPath.py
 TEST = pytest
 STYLE_FIX = autopep8 --in-place --recursive --aggressive --aggressive
-KATTIS = $(PROGRAM) submit.py
+KATTIS = $(PROGRAM) kattis-cli/submit.py
 
 .PHONY: test
 test:
@@ -13,7 +13,7 @@ test:
 run:
 	$(PROGRAM) $(MAIN)
 
-.PHONY: mypy
+.PHONY: mypyx	
 mypy:
 	mypy --strict $(MAIN)
 	mypy --strict $(TESTMAIN)
