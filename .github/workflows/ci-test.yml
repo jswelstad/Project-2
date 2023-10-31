@@ -38,5 +38,5 @@ jobs:
         mypy --strict .
     - name: Test with pytest
       run: |
-        pytest --verbose cosmicpathoptimization/testCosmicPath.py
+        pytest --verbose .
         
