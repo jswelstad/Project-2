@@ -13,7 +13,7 @@ test:
 run:
 	$(PROGRAM) $(MAIN)
 
-.PHONY: mypyx	
+.PHONY: mypy
 mypy:
 	mypy --strict $(MAIN)
 	mypy --strict $(TESTMAIN)
@@ -32,6 +32,11 @@ style-fix:
 kattis:
 	$(KATTIS) $(MAIN) 
 
+.PHONY: localtest
+localtest: 
+	@cat 1.in | $(PROGRAM) $(MAIN) | diff - 1.ans
+	@echo "\nLocal tests passed"
+
 .PHONY: clean
 clean:
 	@rm -rf __pycache__
@@ -40,4 +45,4 @@ clean:
 	@echo "All Clean"
 
 .PHONY: all
-all: mypy style style-fix clean test
+all: mypy style style-fix test localtest clean
