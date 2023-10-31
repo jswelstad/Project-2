@@ -35,7 +35,7 @@ kattis:
 .PHONY: localtest
 localtest: 
 	@cat 1.in | $(PROGRAM) $(MAIN) | diff - 1.ans
-	@echo "Local tests passed"
+	@echo "\nLocal tests passed"
 
 .PHONY: clean
 clean:
@@ -45,4 +45,4 @@ clean:
 	@echo "All Clean"
 
 .PHONY: all
-all: mypy style style-fix clean test localtest
+all: mypy style style-fix test localtest clean
